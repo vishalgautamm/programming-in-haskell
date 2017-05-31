@@ -53,3 +53,6 @@ a `myCompare` b
   | a == b    = EQ
   | otherwise = LT
 
+calcBmi :: (RealFloat a) => [(a,a)] -> [a]
+calcBmi xs = [bmi w h | (w, h) <- xs]
+  where bmi weight height = weight / height ^ 2
