@@ -32,11 +32,15 @@ capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
 -- Guards example
 howPowerfulAreYou :: (RealFloat a) => a -> String
 howPowerfulAreYou power
-  | power <= 100.40 = "You are a worm"
-  | power <= 1000 = "Pfft you are weak"
-  | power <= 5000 = "That aint so bad"
-  | power <= 9000 = "You are close to 9000. Holy hell"
-  | otherwise = "POWER LEVEL OVER 9000!!!!!!!!"
+    | power <= whimpy = "You are a worm"
+    | power <= weaking = "Pfft you are weak"
+    | power <= average = "That aint so bad"
+    | power <= strong = "You are close to 9000. Holy hell"
+    | otherwise = "POWER LEVEL OVER 9000!!!!!!!!"
+  where whimpy = 100
+        weaking = 1000
+        average = 5000
+        strong = 9000
 
 max' :: (Ord a) => a -> a -> a
 max' a b
