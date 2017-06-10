@@ -121,26 +121,26 @@ Prelude> "hello" ++ [1,2,3,4,5]
 
 ## More List functions
 
-* **:t** Returns the inferred type of the value
+**:t** Returns the inferred type of the value
 ```
 Prelude> :t 'v'
 'v' :: Char
 Prelude> :t "v"
 "v" :: [Char]
 ```
-* **Head** returns the head or first element in a list 
+**Head** returns the head or first element in a list 
 ```
 Prelude> head "Hello"
 'H'
 ```
-* **Tail** returns a list without the head
+**Tail** returns a list without the head
 
 ```
 Prelude> tail "world"
 "orld"
 ```
 
-* **Take** returns the specified number of elements from the list, starting from the left
+**Take** returns the specified number of elements from the list, starting from the left
 
 ```
 Prelude> take 6 "Haskell"
@@ -150,7 +150,7 @@ Prelude> length "Haskell"
 Prelude> take 8 "Haskell"
 "Haskell"
 ```
-* **drop** returns the remainder of the list after the specified number of elements has been dropped
+**drop** returns the remainder of the list after the specified number of elements has been dropped
 
 ```
 Prelude> drop 5 "Haskell"
