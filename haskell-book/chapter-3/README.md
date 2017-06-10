@@ -117,7 +117,61 @@ Prelude> "hello" ++ [1,2,3,4,5]
 * In the first example, we have two strings, so the type of *a* matches - they are both Char in ```[Char]```. Since type matches, we get no error and the string concatenates
 * In the second example, we have two lists ( a string and a list of numbers), whose types do not match, so we get the error message.
 
-## Concatenation and Scoping
+## Concatenation and Scoping (Page 99)
+
+## More List functions
+
+* **:t** Returns the inferred type of the value
+```
+Prelude> :t 'v'
+'v' :: Char
+Prelude> :t "v"
+"v" :: [Char]
+```
+* **Head** returns the head or first element in a list 
+```
+Prelude> head "Hello"
+'H'
+```
+* **Tail** returns a list without the head
+
+```
+Prelude> tail "world"
+"orld"
+```
+
+* **Take** returns the specified number of elements from the list, starting from the left
+
+```
+Prelude> take 6 "Haskell"
+"Haskel"
+Prelude> length "Haskell"
+7
+Prelude> take 8 "Haskell"
+"Haskell"
+```
+* **drop** returns the remainder of the list after the specified number of elements has been dropped
+
+```
+Prelude> drop 5 "Haskell"
+"ll"
+Prelude> drop 2 "Haskell"
+"skell"
+```
+
+**(++)** Concatenates lists
+
+```
+Prelude> "Haskell" ++ " is awesome"
+"Haskell is awesome"
+```
+**!!** returns the element that is in the specified position in the list. Note: This is an indexing function, and indices in haskell start from 0. That means the first element of your list is 0, not 1, when using this function. 
+
+```
+Prelude> "Haskell" !! 3
+'k'
+
+```
 
 
 
