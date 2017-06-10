@@ -121,7 +121,7 @@ Prelude> "hello" ++ [1,2,3,4,5]
 
 ## More List functions
 
-**:t** returns the inferred type of the value
+**:t** returns the inferred type of the value.
 ```
 Prelude> :t 'v'
 'v' :: Char
